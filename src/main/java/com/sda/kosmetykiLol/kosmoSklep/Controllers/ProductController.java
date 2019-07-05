@@ -1,16 +1,13 @@
 package com.sda.kosmetykiLol.kosmoSklep.Controllers;
 
 import com.sda.kosmetykiLol.kosmoSklep.Entities.Products.Product;
-import com.sda.kosmetykiLol.kosmoSklep.Repositories.ProductRepository;
 import com.sda.kosmetykiLol.kosmoSklep.Services.ProductService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -23,7 +20,6 @@ public class ProductController {
     public String addProduct(Model model) {
 
         model.addAttribute("product", new Product());
-
         return "product/addproduct";
     }
 
@@ -31,7 +27,29 @@ public class ProductController {
     public String saveProduct(@ModelAttribute("product") Product product) {
 
         productService.addProduct(product);
+        return "product/list";
+    }
 
+    @GetMapping("/buynow/{id}")
+    public String sellProduct(@PathVariable("id") Long id, Model model) {
+
+        Product product = productService.sellProductByID(id);
+        model.addAttribute("product", product);
+        return "product/checkout";
+    }
+
+    @GetMapping("/delete/[id]")
+    public String deleteProductByID(@PathVariable("id") Long id) {
+
+        productService.deleteProductByID(id);
+        return "redirect: /product/list";
+    }
+
+    @GetMapping("/list")
+    public String listAllProducts(Model model) {
+
+        List<Product> products = productService.findAllProducts();
+        model.addAttribute("products", products);
         return "product/list";
     }
 
