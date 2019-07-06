@@ -10,8 +10,8 @@
         <form:form action="/user/create" method="POST" modelAttribute="user">
             First name: <form:input path="firstName"/> <br />
             Last name: <form:input path="lastName"/> <br />
-            Email: <form: input path="email"/> <br />
-            Password: <form: input path="password"/> <br />
+            Email: <form:input path="email"/> <br />
+            Password: <form:input path="password"/> <br />
             Address: <form:input path="streetAddress1"/> <br />
             Address: <form:input path="streetAddress2"/> <br />
             City: <form:input path="city"/> <br />
