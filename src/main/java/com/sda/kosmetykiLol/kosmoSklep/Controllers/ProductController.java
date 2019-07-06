@@ -27,7 +27,7 @@ public class ProductController {
     public String saveProduct(@ModelAttribute("product") Product product) {
 
         productService.addProduct(product);
-        return "product/list";
+        return "redirect:list";
     }
 
     @GetMapping("/buynow/{id}")
@@ -42,7 +42,7 @@ public class ProductController {
     public String deleteProductByID(@PathVariable("id") Long id) {
 
         productService.deleteProductByID(id);
-        return "redirect: /product/list";
+        return "redirect:/product/list";
     }
 
     @GetMapping("/list")
@@ -65,7 +65,7 @@ public class ProductController {
     public String saveUsr(@ModelAttribute("product")Product product){
         productService.addProduct(product);
 
-        return "redirect: /product/list";
+        return "redirect:/product/list";
     }
 
 

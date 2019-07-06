@@ -12,23 +12,17 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    public Optional<User> findByUserID(Long id){ return userRepository.findById(id);}
     public void addUser(User user){userRepository.save(user);}
     public List<User> findAllUsers(){return userRepository.findAll();}
 
     public void deleteById(Integer id) {
         userRepository.deleteById(id);
     }
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
     public Optional<User> getUserById(Integer id) {
         return userRepository.findById(id);
     }
-
-
     public void editUser(User user) {
         userRepository.save(user);
     }

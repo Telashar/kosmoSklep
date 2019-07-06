@@ -10,26 +10,25 @@
         <h2>User</h2>
 
 
-        <c:if test="${empty users}">
-            <h3>Sorry, no records found... :(</h3>
-        </c:if>
+<%--        <c:if test="${empty users}">--%>
+<%--            <h3>Sorry, no records found... :(</h3>--%>
+<%--        </c:if>--%>
 
 
 
-        <c:forEach items="${user}" var="user">
+        <c:forEach items="${users}" var="user">
             First name: ${user.firstName} <br/>
             Last name: ${user.lastName} <br/>
             Email: ${user.email} <br/>
             Password: ${user.password} <br/>
-            Address: ${user.streetAddress1} <br/>
-            Address: ${user.streetAddress2} <br/>
+            Address line 1: ${user.streetAddress1} <br/>
+            Address line 2: ${user.streetAddress2} <br/>
             City: ${user.city} <br/>
             Postal Code: ${user.postalCode} <br/>
             State: ${user.state} <br/>
             Country: ${user.country} <br/>
             <a href="/user/edit/${user.id}">Edit</a>
             <a href="/user/delete/${user.id}">Delete</a>
-            <a href="/product/create/${user.id}">Add product</a>
             <br/><br/><br/>
         </c:forEach>
         </body>

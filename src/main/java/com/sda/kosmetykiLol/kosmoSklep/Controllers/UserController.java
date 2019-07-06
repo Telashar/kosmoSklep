@@ -31,7 +31,7 @@ public class UserController {
 
         userService.addUser(user);
 
-        return "list";
+        return "redirect:list";
     }
 
     @GetMapping("/index")
@@ -66,16 +66,13 @@ public class UserController {
     }
 
 
-
-
-
     @GetMapping("/list")
     public String findAllUsers(Model model) {
 
         List<User> listUsers = userService.findAllUsers();
         model.addAttribute("users", listUsers);
 
-        return "list";
+        return "user/list";
     }
 
 
