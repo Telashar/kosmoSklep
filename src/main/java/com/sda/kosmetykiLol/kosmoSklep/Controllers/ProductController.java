@@ -27,7 +27,7 @@ public class ProductController {
     public String saveProduct(@ModelAttribute("product") Product product) {
 
         productService.addProduct(product);
-        return "redirect:list";
+        return "redirect:/product/list";
     }
 
     @GetMapping("/buynow/{id}")

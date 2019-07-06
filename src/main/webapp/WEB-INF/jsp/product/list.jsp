@@ -7,7 +7,7 @@
         <title>Products</title>
         </head>
         <body>
-        <h2>Pets</h2>
+        <h2>Product</h2>
 
 
         <c:if test="${empty products}">
@@ -16,10 +16,10 @@
 
 
 
-        <c:forEach items="${products}" var="pet">
+        <c:forEach items="${products}" var="product">
             Name: ${product.name} <br/>
             Price: ${product.price} <br/>
-            Description: ${product.escription} <br/>
+            Description: ${product.description} <br/>
             Available: ${product.available} <br/>
 
             <a href="/product/edit/${product.id}">Edit</a>

@@ -7,7 +7,7 @@
         </head>
         <body>
         <h2>Create product form</h2>
-        <form:form action="/product/create/${userId}" method="POST" modelAttribute="product">
+        <form:form action="/product/create" method="POST" modelAttribute="product">
             Name: <form:input path="name"/> <br />
             Price: <form:input path="price"/> <br />
             Description: <form:input path="description"/> <br />
