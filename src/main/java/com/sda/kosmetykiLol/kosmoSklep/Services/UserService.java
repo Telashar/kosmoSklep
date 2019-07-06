@@ -12,7 +12,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public Optional<User> findByUserID(Long id){ return userRepository.findById(id);}
     public void addUser(User user){userRepository.save(user);}
