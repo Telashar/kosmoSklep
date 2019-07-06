@@ -24,7 +24,7 @@
 
             <a href="/product/edit/${product.id}">Edit</a>
             <a href="/product/delete/${product.id}">Delete</a>
-            <a href="/product/create/${product.id}">Create</a>
+            <a href="/product/create">Create</a>
             <br/><br/><br/>
         </c:forEach>
         </body>
