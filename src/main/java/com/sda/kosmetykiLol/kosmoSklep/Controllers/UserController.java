@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/user")
@@ -27,13 +29,22 @@ public class UserController {
 
         userService.addUser(user);
 
-        return "user/list";
+        return "list";
     }
 
     @GetMapping("/index")
-    public String getMainPage(){
+    public String getMainPage() {
 
         return "index";
+    }
+
+    @GetMapping("/list")
+    public String findAllUsers(Model model) {
+
+        List<User> listUsers = userService.findAllUsers();
+        model.addAttribute("users", listUsers);
+
+        return "list";
     }
 
 
