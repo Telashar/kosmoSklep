@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -31,11 +31,11 @@ public class UserController {
 
         userService.addUser(user);
 
-        return "user/list";
+        return "list";
     }
 
     @GetMapping("/index")
-    public String getMainPage(){
+    public String getMainPage() {
 
         return "index";
     }
@@ -68,6 +68,15 @@ public class UserController {
 
 
 
+
+    @GetMapping("/list")
+    public String findAllUsers(Model model) {
+
+        List<User> listUsers = userService.findAllUsers();
+        model.addAttribute("users", listUsers);
+
+        return "list";
+    }
 
 
 

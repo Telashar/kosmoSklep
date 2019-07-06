@@ -34,7 +34,7 @@ public class ProductController {
     public String sellProduct(@PathVariable("id") Long id, Model model) {
 
         Product product = productService.sellProductByID(id);
-        model.addAttribute("product", product);
+        model.addAttribute("zamowienie", product);
         return "product/checkout";
     }
 
@@ -52,5 +52,26 @@ public class ProductController {
         model.addAttribute("products", products);
         return "product/list";
     }
+
+    @GetMapping("/edit/{id}")
+    public String editUser(@PathVariable("id")Long id, Model model){
+        Product product = productService.findProductByID(id).get();
+        model.addAttribute("product",product);
+
+        return "edit";
+    }
+
+    @PostMapping("/edit/{id}")
+    public String saveUsr(@ModelAttribute("product")Product product){
+        productService.addProduct(product);
+
+        return "redirect: /product/list";
+    }
+
+
+
+
+
+
 
 }
