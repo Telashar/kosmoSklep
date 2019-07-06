@@ -17,10 +17,10 @@ public class UserService {
     public void addUser(User user){userRepository.save(user);}
     public List<User> findAllUsers(){return userRepository.findAll();}
 
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         userRepository.deleteById(id);
     }
-    public Optional<User> getUserById(Integer id) {
+    public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
     }
     public void editUser(User user) {

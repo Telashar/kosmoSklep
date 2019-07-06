@@ -40,14 +40,14 @@ public class UserController {
         return "index";
     }
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") Integer id) {
+    public String delete(@PathVariable("id") Long id) {
         userService.deleteById(id);
 
         return "redirect:/user/list";
     }
 
     @GetMapping("/edit/{id}")
-    public String editUserForm(@PathVariable("id") Integer id, Model model) {
+    public String editUserForm(@PathVariable("id") Long id, Model model) {
         Optional<User> maybeUser = userService.getUserById(id);
 
         if (!maybeUser.isPresent()) {

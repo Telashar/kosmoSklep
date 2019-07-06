@@ -38,7 +38,7 @@ public class ProductController {
         return "product/checkout";
     }
 
-    @GetMapping("/delete/[id]")
+    @GetMapping("/delete/{id}")
     public String deleteProductByID(@PathVariable("id") Long id) {
 
         productService.deleteProductByID(id);
