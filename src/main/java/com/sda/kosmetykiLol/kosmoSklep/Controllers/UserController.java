@@ -1,6 +1,7 @@
 package com.sda.kosmetykiLol.kosmoSklep.Controllers;
 
 import ch.qos.logback.core.status.Status;
+import com.sda.kosmetykiLol.kosmoSklep.Entities.Products.Product;
 import com.sda.kosmetykiLol.kosmoSklep.Entities.Users.User;
 import com.sda.kosmetykiLol.kosmoSklep.Services.UserService;
 import lombok.RequiredArgsConstructor;
@@ -48,18 +49,24 @@ public class UserController {
 
     @GetMapping("/edit/{id}")
     public String editUserForm(@PathVariable("id") Long id, Model model) {
-        Optional<User> maybeUser = userService.getUserById(id);
 
-        if (!maybeUser.isPresent()) {
-            return "redirect:/user/create";
-        } else {
-            model.addAttribute("user", maybeUser.get());
-            return "user/edit-form";
-        }
+        User user = userService.findUserByID(id).get();
+        model.addAttribute("user",user);
+
+        return "user/edit-form";
+
+//        Optional<User> maybeUser = userService.getUserById(id);
+//
+//        if (!maybeUser.isPresent()) {
+//            return "redirect:/user/create";
+//        } else {
+//            model.addAttribute("user", maybeUser.get());
+//            return "user/edit-form";
+//        }
     }
 
     @PostMapping("/edit/{id}")
-    public String editUser(@ModelAttribute("owner") User user) {
+    public String editUser(@ModelAttribute("user") User user) {
         userService.editUser(user);
 
         return "redirect:/user/list";
