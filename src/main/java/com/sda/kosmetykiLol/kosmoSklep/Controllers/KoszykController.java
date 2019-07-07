@@ -35,10 +35,6 @@ public class KoszykController {
         model.addAttribute("koszyk", products);
         return "koszyk/viewkoszyk";
 
-
-//        model.addAttribute("koszyk",koszykService.viewKoszyk());
-//
-//        return "koszyk";
     }
 
     @GetMapping("/delete/{id}")
@@ -50,9 +46,8 @@ public class KoszykController {
     @GetMapping("/finalizekoszyk")
     public String buyKoszyk(Model model){
 
-        List<Product> zamowienie = koszykService.viewKoszyk();
+        List<Product> zamowienie = koszykService.findAllProducts();
         model.addAttribute("zamowienie",zamowienie);
-        koszykService.flushKoszyk();
         return "product/checkout";
     }
 

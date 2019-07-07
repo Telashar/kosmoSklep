@@ -23,26 +23,17 @@ public class KoszykService {
         products.add(product);
     }
 
-//    public void deleteProductKoszyk(Long id) {
-//        koszykRepository.deleteById(id);
-//    }
-//
-//    //    public List<Product> viewKoszyk(){return  koszykRepository.findAll();}
-//    public void flushKoszyk() {
-//        koszykRepository.flush();
-//    }
-//
-//    public Long numberInKoszyk() {
-//        return koszykRepository.count();
-//    }
-//
-//
-//    public List<Product> findAllProducts() {
-//        return koszykRepository.findAll();
-//    }
-//
-//    public List<Product> viewKoszyk() {
-//        return koszykRepository.findAll();
-//    }
+    public void deleteProductKoszyk(Long i) {
+        products.remove(i);
+    }
 
+
+    public Long numberInKoszyk() {
+        return Long.valueOf(products.size());
+    }
+
+
+    public List<Product> findAllProducts() {
+        return products;
+    }
 }
