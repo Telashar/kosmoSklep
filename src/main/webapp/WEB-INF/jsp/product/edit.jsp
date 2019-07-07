@@ -48,10 +48,10 @@
         <a class="nav-link js-scroll-trigger" href="#brands">Our Brands</a>
         </li>
         <li class="nav-item">
-        <a href="/user/create">Registration</a>
+        <a class="nav-link js-scroll-trigger" href="/user/create">Registration</a>
         </li>
         <li class="nav-item">
-        <a href="/product">Products</a>
+        <a class="nav-link js-scroll-trigger" href="/product/list">Products</a>
         </li>
         </ul>
         </div>
@@ -61,7 +61,7 @@
         </head>
         <body>
         <h2>Edit product form</h2>
-        <form:form action="/product/edit/${product.user.id}" method="POST" modelAttribute="product">
+        <form:form action="/product/edit/${product.id}" method="POST" modelAttribute="product">
             Name: <form:input path="name"/> <br />
             Price: <form:input path="Price"/> <br />
             Description: <form:input path="description"/> <br />
