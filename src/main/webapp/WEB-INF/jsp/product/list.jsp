@@ -78,8 +78,10 @@
 
             <a href="/product/edit/${product.id}">Edit</a>
             <a href="/product/delete/${product.id}">Delete</a>
-            <a href="/product/create">Create</a>
+            <a href="/add/${product.id}">Buy</a>
             <br/><br/><br/>
         </c:forEach>
+            <a href="/product/create">Create</a>
+            <a href="/viewkoszyk">Koszyk</a>
         </body>
         </html>
