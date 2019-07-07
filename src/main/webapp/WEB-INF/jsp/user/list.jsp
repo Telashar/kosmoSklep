@@ -68,7 +68,9 @@
 <%--            <h3>Sorry, no records found... :(</h3>--%>
 <%--        </c:if>--%>
 
-
+        <c:if test="${empty users}">
+            <h3>Sorry, no records found... :(</h3>
+        </c:if>
 
         <c:forEach items="${users}" var="user">
             First name: ${user.firstName} <br/>

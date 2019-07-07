@@ -25,16 +25,20 @@ public class KoszykController {
 
         Product product = productService.findProductByID(id).get();
         koszykService.addProductToKoszyk(product);
-        return "redirect: /product/list";
+        return "redirect:/product/list";
     }
 
-    @GetMapping("/vewkoszyk")
+    @GetMapping("/viewkoszyk")
     public String viewKoszyk(Model model){
 
+        List<Product> products = koszykService.findAllProducts();
+        model.addAttribute("koszyk", products);
+        return "koszyk/viewkoszyk";
 
-        model.addAttribute("koszyk",koszykService.viewKoszyk());
 
-        return "koszyk";
+//        model.addAttribute("koszyk",koszykService.viewKoszyk());
+//
+//        return "koszyk";
     }
 
     @GetMapping("/delete/{id}")
