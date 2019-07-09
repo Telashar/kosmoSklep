@@ -23,8 +23,9 @@ public class KoszykService {
         products.add(product);
     }
 
-    public void deleteProductKoszyk(Long i) {
-        products.remove(i);
+    public void deleteProductKoszyk(int i) {
+        Product product = products.get(i);
+        products.remove(product);
     }
 
 

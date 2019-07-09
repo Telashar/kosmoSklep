@@ -68,17 +68,15 @@
     <h3>Sorry, no records found... :(</h3>
 </c:if>
 
+<c:forEach items="${koszyk}" var="product" varStatus="i">
 
-
-<c:forEach items="${koszyk}" var="product">
     Name: ${product.name} <br/>
     Price: ${product.price} <br/>
-
-    <a href="/product/delete/${product.id}">Delete</a>
+    <a href="/delete/${i.index}">Delete</a>
     <br/><br/><br/>
 </c:forEach>
 <%--    Sum: ${product.sum} <br/>--%>
-    <a href="/finalizekoszyk/${product.id}">Confirm</a>
+    <a href="/finalizekoszyk}">Confirm</a>
 
 </body>
 </html>
