@@ -38,7 +38,7 @@ public class KoszykController {
     @GetMapping("/delete/{index}")
     public String deleteFromKoszyk(@PathVariable("index")int index){
         koszykService.deleteProductKoszyk(index);
-        return "redirect:koszyk";
+        return "redirect:/viewkoszyk";
     }
 
     @GetMapping("/finalizekoszyk")
