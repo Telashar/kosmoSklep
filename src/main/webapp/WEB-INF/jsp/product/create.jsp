@@ -82,10 +82,13 @@
                                         Available: <form:input path="available"/> <br />
                                         <input type="submit" value="create"/>
                                 </form:form>
+
                                 </body>
                         </div>
                 </div>
         </header>
         </head>
+
+
 
         </html>
