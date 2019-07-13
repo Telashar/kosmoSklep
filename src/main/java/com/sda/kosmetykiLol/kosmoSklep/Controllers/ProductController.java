@@ -58,7 +58,7 @@ public class ProductController {
         Product product = productService.findProductByID(id).get();
         model.addAttribute("product",product);
 
-        return "edit";
+        return "product/edit";
     }
 
     @PostMapping("/edit/{id}")

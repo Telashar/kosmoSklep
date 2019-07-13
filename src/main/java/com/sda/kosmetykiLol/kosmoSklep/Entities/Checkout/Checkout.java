@@ -1,24 +1,29 @@
 package com.sda.kosmetykiLol.kosmoSklep.Entities.Checkout;
 
 import com.sda.kosmetykiLol.kosmoSklep.Entities.Products.Product;
-import com.sda.kosmetykiLol.kosmoSklep.Entities.Users.User;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
-@Entity
+
 @Data
 public class Checkout {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    //produkty
+    Long totalCost;
+    List<Product> listOfProducts;
+    int numberOfProducts;
 
-    @ManyToOne
-    User user;
-
-    @ManyToOne
-    Product product;
+    //dane adresowe
+//    String firstName;
+//    String lastName;
+//    String address1;
+//    String address2;
+//    String city;
+//    String postalCode;
+//    String state;
+//    String country;
 
 
 

@@ -29,12 +29,23 @@ public class KoszykService {
     }
 
 
-    public Long numberInKoszyk() {
-        return Long.valueOf(products.size());
+    public int numberInKoszyk() {
+        return products.size();
     }
 
 
     public List<Product> findAllProducts() {
         return products;
     }
+
+    public Long totalCost(){
+
+        Long totalCost = 0L;
+
+        for (int i = 0; i <products.size() ; i++) {
+            totalCost += products.get(i).getPrice();
+        }
+        return totalCost;
+    }
+
 }

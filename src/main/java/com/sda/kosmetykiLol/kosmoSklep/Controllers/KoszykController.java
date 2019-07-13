@@ -1,5 +1,6 @@
 package com.sda.kosmetykiLol.kosmoSklep.Controllers;
 
+import com.sda.kosmetykiLol.kosmoSklep.Entities.Checkout.Checkout;
 import com.sda.kosmetykiLol.kosmoSklep.Entities.Products.Product;
 import com.sda.kosmetykiLol.kosmoSklep.Services.KoszykService;
 import com.sda.kosmetykiLol.kosmoSklep.Services.ProductService;
@@ -17,6 +18,7 @@ public class KoszykController {
 
     private final KoszykService koszykService;
     private final ProductService productService;
+    private Checkout checkout;
 
     @GetMapping("/add/{id}")
     public String addToKoszyk(@PathVariable("id")Long id){
@@ -45,7 +47,11 @@ public class KoszykController {
     public String buyKoszyk(Model model){
 
         List<Product> zamowienie = koszykService.findAllProducts();
-        model.addAttribute("zamowienie",zamowienie);
+        checkout.setListOfProducts(zamowienie);
+        checkout.setNumberOfProducts(koszykService.numberInKoszyk());
+        checkout.setTotalCost(koszykService.totalCost());
+
+        model.addAttribute("checkout",checkout);
         return "product/checkout";
     }
 
