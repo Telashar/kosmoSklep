@@ -64,21 +64,15 @@
 <h2>Checkout</h2>
 
 
-<c:if test="${empty koszyk}">
-    <h3>Sorry, no records found... :(</h3>
-</c:if>
 
-
-<c:forEach items="${koszyk}" var="koszyk">
-    Lista produktów: ${checkout.listOfProducts} <br/>
-
-    <br/><br/><br/>
+Product List:
+<c:forEach items="${checkout.listOfProducts}" var="koszyk">
+     ${koszyk.name},
 </c:forEach>
+<br />
+Number of products: ${checkout.numberOfProducts} <br/>
+Sum: ${checkout.totalCost} <br/>
 
-Ilość produktów: ${checkout.numberOfProducts} <br/>
-Suma: ${checkout.totalCost} <br/>
-
-<a href="/viewkoszyk">Koszyk</a>
-<a href="/buy">Return to Main Page</a>
+<a href="/">Return to Main Page</a>
 </body>
 </html>

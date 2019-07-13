@@ -12,7 +12,9 @@ public class Checkout {
 
     //produkty
     Long totalCost;
+
     List<Product> listOfProducts;
+
     int numberOfProducts;
 
     //dane adresowe
