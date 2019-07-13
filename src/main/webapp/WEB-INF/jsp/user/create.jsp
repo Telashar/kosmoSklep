@@ -30,29 +30,23 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <img src="img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
+        <a class="navbar-brand js-scroll-trigger" href="/">
+            <img src="/img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
         </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
+
+        <%--        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"--%>
+        <%--                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"--%>
+        <%--                aria-label="Toggle navigation">--%>
+        <%--            Menu--%>
+        <%--            <i class="fas fa-bars"></i>--%>
+        <%--        </button>--%>
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    <a class="nav-link js-scroll-trigger" href="/">Main page</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#brands">Our Brands</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/user/create">Registration</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/product/list">Products</a>
-                </li>
+
             </ul>
         </div>
     </div>
