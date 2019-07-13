@@ -72,7 +72,7 @@
 						<a href="/user/create">Registration</a>
 					</li>
 					<li class="nav-item">
-						<a href="/product">Products</a>
+						<a href="/product/list">Products</a>
 					</li>
 				</ul>
 			</div>
