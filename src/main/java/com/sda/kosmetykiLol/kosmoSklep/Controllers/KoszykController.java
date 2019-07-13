@@ -18,7 +18,7 @@ public class KoszykController {
 
     private final KoszykService koszykService;
     private final ProductService productService;
-    private Checkout checkout;
+    public Checkout checkout;
 
     @GetMapping("/add/{id}")
     public String addToKoszyk(@PathVariable("id")Long id){
@@ -52,7 +52,7 @@ public class KoszykController {
         checkout.setTotalCost(koszykService.totalCost());
 
         model.addAttribute("checkout",checkout);
-        return "product/checkout";
+        return "finalizekoszyk";
     }
 
 
