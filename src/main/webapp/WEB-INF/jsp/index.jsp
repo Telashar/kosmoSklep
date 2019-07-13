@@ -17,7 +17,7 @@
     <link href="bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="../../../resources/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
@@ -25,7 +25,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="../../../resources/static/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +35,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <img src="../../../resources/static/img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
+            <img src="logo_transparent.png" alt="Beauty Wholesale" height="28px">
         </a>
 
 <%--        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"--%>
@@ -115,19 +115,19 @@
         </div>
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="../../../resources/static/img/brands/bjs.jpg"
+                <img class="img-fluid d-block mx-auto" src="bjs.jpg"
                      alt="Bourjois">
             </div>
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="../../../resources/static/img/brands/maxfactor.jpg"
+                <img class="img-fluid d-block mx-auto" src="maxfactor.jpg"
                      alt="MaxFactor">
             </div>
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="../../../resources/static/img/brands/revlon.jpg"
+                <img class="img-fluid d-block mx-auto" src="revlon.jpg"
                      alt="Revlon">
             </div>
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="../../../resources/static/img/brands/rimmel.jpg"
+                <img class="img-fluid d-block mx-auto" src="rimmel.jpg"
                      alt="Rimmel">
             </div>
         </div>
@@ -222,11 +222,11 @@
 
 
 <!-- Bootstrap core JavaScript -->
-<script src="../../../resources/static/vendor/jquery/jquery.min.js"></script>
-<script src="../../../resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="../../../resources/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="jquery.easing.min.js"></script>
 
 </body>
 
