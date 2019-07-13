@@ -76,7 +76,7 @@
     <br/><br/><br/>
 </c:forEach>
 <%--    Sum: ${product.sum} <br/>--%>
-    <a href="/index">Return to Main Page</a>
+    <a href="/">Return to Main Page</a>
     <a href="/finalizekoszyk}">Confirm</a>
 
 </body>
