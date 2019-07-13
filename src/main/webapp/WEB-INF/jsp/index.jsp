@@ -5,7 +5,7 @@
 
 <head>
 
-    <link href="<c:url value="/src/main/resources/static/css/style.css"/>" rel="stylesheet">
+    <link href="<c:url value="style.css"/>" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -14,7 +14,7 @@
     <title>Beauty Cosmetics</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../../resources/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="../../../resources/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -25,7 +25,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="../../../resources/static/css/style.css" rel="stylesheet">
+    <link href="../../../resources/static/style.css" rel="stylesheet">
 
 </head>
 
@@ -95,9 +95,9 @@
             </div>
             <div class="side-img col-lg-6 d-lg-block ">
                 <picture>
-                    <source srcset="../../../resources/static/img/about.webp" type="image/webp">
-                    <source srcset="../../../resources/static/img/about.jpg" type="image/jpeg">
-                    <img src="../../../resources/static/img/about.jpg">
+                    <source srcset="about.jpg" type="image/webp">
+                    <source srcset="about.jpg" type="image/jpeg">
+                    <img src="about.jpg">
                 </picture>
             </div>
         </div>

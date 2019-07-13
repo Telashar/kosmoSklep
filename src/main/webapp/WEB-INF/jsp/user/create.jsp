@@ -61,6 +61,7 @@
 </head>
 <body>
 <h2>Create user form</h2>
+<img src="/aaa.jpg"/>
 <form:form action="/user/create" method="POST" modelAttribute="user">
     First name: <form:input path="firstName"/> <br/>
     Last name: <form:input path="lastName"/> <br/>
