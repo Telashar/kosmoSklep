@@ -1,27 +1,31 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Create user</title>
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+
+    <link href="<c:url value="css/style.css"/>" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Beauty Cosmetics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -30,7 +34,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <img src="/img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
         </a>
 
@@ -45,29 +49,98 @@
             <ul class="navbar-nav text-uppercase ml-auto">
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="/">Main page</a>
-                </li>
 
             </ul>
         </div>
     </div>
 </nav>
 
-</head>
-<body>
-<h2>Create user form</h2>
-<img src="/aaa.jpg"/>
-<form:form action="/user/create" method="POST" modelAttribute="user">
-    First name: <form:input path="firstName"/> <br/>
-    Last name: <form:input path="lastName"/> <br/>
-    Email: <form:input path="email"/> <br/>
-    Password: <form:input path="password"/> <br/>
-    Address: <form:input path="streetAddress1"/> <br/>
-    Address: <form:input path="streetAddress2"/> <br/>
-    City: <form:input path="city"/> <br/>
-    Postal Code: <form:input path="postalCode"/> <br/>
-    State: <form:input path="state"/> <br/>
-    Country: <form:input path="country"/> <br/>
-    <input type="submit" value="Create"/>
-</form:form>
+<!-- Header -->
+
+
+<!-- About us -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <form:form action="/user/create" method="POST" modelAttribute="user">
+                First name: <form:input path="firstName"/> <br/>
+                Last name: <form:input path="lastName"/> <br/>
+                Email: <form:input path="email"/> <br/>
+                Password: <form:input path="password"/> <br/>
+                Address: <form:input path="streetAddress1"/> <br/>
+                Address: <form:input path="streetAddress2"/> <br/>
+                City: <form:input path="city"/> <br/>
+                Postal Code: <form:input path="postalCode"/> <br/>
+                State: <form:input path="state"/> <br/>
+                Country: <form:input path="country"/> <br/>
+                <input type="submit" value="Create"/>
+            </form:form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 text-justify">
+
+        </div>
+        <div class="side-img col-lg-6 d-lg-block ">
+            <picture>
+                <source srcset="/img/about.jpg" type="image/webp">
+                <source srcset="/img/about.jpg" type="image/jpeg">
+                <img src="/img/about.jpg">
+            </picture>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; Beauty Cosmetics 2019</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <!--<li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>-->
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <!--<li class="list-inline-item">
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Terms of Use</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="/bootstrap2/jquery.min.js"></script>
+<script src="/bootstrap2/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/bootstrap2/jquery.easing.min.js"></script>
+
 </body>
+
 </html>

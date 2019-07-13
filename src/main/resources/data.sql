@@ -1,7 +1,7 @@
-INSERT INTO product (id, price, name, description, available) VALUES ('1', '8', 'Apache', 'Combat Helicopter', '8');
-INSERT INTO product (id, price, name, description, available) VALUES ('2', '8', 'Tirpitz', 'KMS Battleship', '8');
-INSERT INTO product (id, price, name, description, available) VALUES ('3', '8', 'Baneblade', 'Tank', '8');
-INSERT INTO product (id, price, name, description, available) VALUES ('4', '1', 'GodEmperor', 'of Mankind', '1');
+INSERT INTO product (id, price, name, description, available) VALUES ('1', '11', 'Bourjois', 'Your Bourjois here', '100');
+INSERT INTO product (id, price, name, description, available) VALUES ('2', '5', 'Max Factor', 'Your Max Factor here', '500');
+INSERT INTO product (id, price, name, description, available) VALUES ('3', '8', 'Revlon', 'Your Revlon here', '250');
+INSERT INTO product (id, price, name, description, available) VALUES ('4', '15', 'Rimmel', 'Your Rimmel here', '80');
 --
 -- INSERT INTO owner(id, first_name, last_name, address, city, telephone) VALUES ('1', 'Jan', 'Kowalski', 'Al. Grunwaldzka', 'Gdansk', '123123123');
 -- INSERT INTO owner(id, first_name, last_name, address, city, telephone) VALUES ('2', 'Michał', 'Kowalski', 'Al. Niepodleglosci', 'Sopot', '123123123');
