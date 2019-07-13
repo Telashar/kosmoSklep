@@ -82,6 +82,6 @@
 </c:forEach>
 <a href="/product/create">Create</a>
 <a href="/viewkoszyk">Koszyk</a>
-<a href="/index">Return to Main Page</a>
+<a href="/">Return to Main Page</a>
 </body>
 </html>

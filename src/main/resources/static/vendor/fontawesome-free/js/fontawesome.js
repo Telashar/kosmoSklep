@@ -614,7 +614,7 @@
       return;
     }
 
-    var style = DOCUMENT.createElement('static.style');
+    var style = DOCUMENT.createElement('static.css.style');
     style.setAttribute('type', 'text/css');
     style.innerHTML = css;
     var headChildren = DOCUMENT.head.childNodes;
@@ -819,7 +819,7 @@
     var styleString = joinStyles(styles);
 
     if (styleString.length > 0) {
-      attributes['static.style'] = styleString;
+      attributes['static.css.style'] = styleString;
     }
 
     if (transformIsMeaningful(transform)) {
@@ -866,7 +866,7 @@
         x: width / height / 2,
         y: 0.5
       };
-      attributes['static.style'] = joinStyles(_objectSpread({}, styles, {
+      attributes['static.css.style'] = joinStyles(_objectSpread({}, styles, {
         'transform-origin': "".concat(offset.x + transform.x / 16, "em ").concat(offset.y + transform.y / 16, "em")
       }));
     }
@@ -1003,7 +1003,7 @@
     var styleString = joinStyles(styles);
 
     if (styleString.length > 0) {
-      attributes['static.style'] = styleString;
+      attributes['static.css.style'] = styleString;
     }
 
     var val = [];
@@ -1039,7 +1039,7 @@
     var styleString = joinStyles(extra.styles);
 
     if (styleString.length > 0) {
-      attributes['static.style'] = styleString;
+      attributes['static.css.style'] = styleString;
     }
 
     var val = [];
@@ -1435,7 +1435,7 @@
   }
 
   function styleParser (node) {
-    var style = node.getAttribute('static.style');
+    var style = node.getAttribute('static.css.style');
     var val = [];
 
     if (style) {
@@ -1565,7 +1565,7 @@
 
   function attributesParser (node) {
     var extraAttributes = toArray(node.attributes).reduce(function (acc, attr) {
-      if (acc.name !== 'class' && acc.name !== 'static.style') {
+      if (acc.name !== 'class' && acc.name !== 'static.css.style') {
         acc[attr.name] = attr.value;
       }
 

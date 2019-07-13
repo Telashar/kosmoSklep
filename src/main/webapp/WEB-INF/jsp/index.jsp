@@ -5,7 +5,7 @@
 
 <head>
 
-    <link href="<c:url value="style.css"/>" rel="stylesheet">
+    <link href="<c:url value="css/style.css"/>" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -14,10 +14,10 @@
     <title>Beauty Cosmetics</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="all.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
@@ -25,7 +25,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +35,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <img src="logo_transparent.png" alt="Beauty Wholesale" height="28px">
+            <img src="/img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
         </a>
 
 <%--        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"--%>
@@ -95,9 +95,9 @@
             </div>
             <div class="side-img col-lg-6 d-lg-block ">
                 <picture>
-                    <source srcset="about.jpg" type="image/webp">
-                    <source srcset="about.jpg" type="image/jpeg">
-                    <img src="about.jpg">
+                    <source srcset="/img/about.jpg" type="image/webp">
+                    <source srcset="/img/about.jpg" type="image/jpeg">
+                    <img src="/img/about.jpg">
                 </picture>
             </div>
         </div>
@@ -115,19 +115,19 @@
         </div>
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="bjs.jpg"
+                <img class="img-fluid d-block mx-auto" src="/img/bjs.jpg"
                      alt="Bourjois">
             </div>
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="maxfactor.jpg"
+                <img class="img-fluid d-block mx-auto" src="/img/maxfactor.jpg"
                      alt="MaxFactor">
             </div>
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="revlon.jpg"
+                <img class="img-fluid d-block mx-auto" src="/img/revlon.jpg"
                      alt="Revlon">
             </div>
             <div class="col-md-3 col-sm-6">
-                <img class="img-fluid d-block mx-auto" src="rimmel.jpg"
+                <img class="img-fluid d-block mx-auto" src="/img/rimmel.jpg"
                      alt="Rimmel">
             </div>
         </div>
@@ -222,11 +222,11 @@
 
 
 <!-- Bootstrap core JavaScript -->
-<script src="jquery.min.js"></script>
-<script src="bootstrap.bundle.min.js"></script>
+<script src="/bootstrap2/jquery.min.js"></script>
+<script src="/bootstrap2/bootstrap.bundle.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="jquery.easing.min.js"></script>
+<script src="/bootstrap2/jquery.easing.min.js"></script>
 
 </body>
 
