@@ -48,10 +48,10 @@
         <a class="nav-link js-scroll-trigger" href="#brands">Our Brands</a>
         </li>
         <li class="nav-item">
-        <a href="/user/create">Registration</a>
+        <a class="nav-link js-scroll-trigger" href="/user/create">Registration</a>
         </li>
         <li class="nav-item">
-        <a href="/product">Products</a>
+        <a class="nav-link js-scroll-trigger" href="/product/list">Products</a>
         </li>
         </ul>
         </div>

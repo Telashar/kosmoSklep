@@ -35,11 +35,11 @@ public class UserController {
         return "redirect:list";
     }
 
-    @GetMapping("/index")
-    public String getMainPage() {
-
-        return "index";
-    }
+//    @GetMapping("/index")
+//    public String getMainPage() {
+//
+//        return "index";
+//    }
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") Long id) {
         userService.deleteById(id);
