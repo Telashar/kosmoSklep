@@ -54,10 +54,16 @@
                     <a class="nav-link js-scroll-trigger" href="#brands">Our Brands</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/user/create">Registration</a>
+                    <a class="nav-link js-scroll-trigger" href="/product/list">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/product/list">Products</a>
+                    <a class="nav-link js-scroll-trigger" href="/user/create">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/login">Log in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/logout">Log out</a>
                 </li>
             </ul>
         </div>
