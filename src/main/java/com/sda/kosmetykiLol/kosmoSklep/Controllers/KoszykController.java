@@ -45,15 +45,26 @@ public class KoszykController {
 
     @GetMapping("/finalizekoszyk")
     public String buyKoszyk(Model model){
-        Checkout checkout = new Checkout();
-        List<Product> zamowienie = koszykService.findAllProducts();
-        checkout.setListOfProducts(zamowienie);
+        final Checkout checkout = new Checkout();
+
+        checkout.setListOfProducts(koszykService.findAllProducts());
         checkout.setNumberOfProducts(koszykService.numberInKoszyk());
         checkout.setTotalCost(koszykService.totalCost());
 
         model.addAttribute("checkout",checkout);
+
+
+
         return "koszyk/finalizekoszyk";
     }
+
+    @GetMapping("/finitobueno")
+    public String purchaseSuccessful(){
+        koszykService.flushKoszyk();
+        return "koszyk/finitobueno";
+    }
+
+
 
 
 

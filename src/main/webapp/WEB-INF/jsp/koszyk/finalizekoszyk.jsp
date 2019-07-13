@@ -73,6 +73,8 @@ Product List:
 Number of products: ${checkout.numberOfProducts} <br/>
 Sum: ${checkout.totalCost} <br/>
 
+<a href="/finitobueno">Finalize Purchase</a>
+<br />
 <a href="/">Return to Main Page</a>
 </body>
 </html>
