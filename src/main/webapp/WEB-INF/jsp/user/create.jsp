@@ -34,7 +34,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#http://localhost:8080/#page-top">
+        <a class="navbar-brand js-scroll-trigger" href="http://localhost:8080/#page-top">
             <img src="/img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
         </a>
 
@@ -61,7 +61,9 @@
 <!-- About us -->
 <section id="about">
     <div class="container">
-        <div class="row">
+        <div class="intro-text">
+            <body>
+            <h2>User Create</h2>
             <form:form action="/user/create" method="POST" modelAttribute="user">
                 First name: <form:input path="firstName"/> <br/>
                 Last name: <form:input path="lastName"/> <br/>
@@ -75,6 +77,7 @@
                 Country: <form:input path="country"/> <br/>
                 <input type="submit" value="Create"/>
             </form:form>
+            </body>
         </div>
     </div>
     <div class="row">

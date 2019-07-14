@@ -1,91 +1,153 @@
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-        <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-        <meta charset="UTF-8">
-        <title>User</title>
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 
-        </head>
+<head>
 
-        <body id="page-top">
+        <link href="<c:url value="css/style.css"/>" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <title>Beauty Cosmetics</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+              type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles for this template -->
+        <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="http://localhost:8080/#page-top">
-        <img src="img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-        <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#brands">Our Brands</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="/user/create">Registration</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="/product/list">Products</a>
-        </li>
-        </ul>
+                <a class="navbar-brand js-scroll-trigger" href="http://localhost:8080/#page-top">
+                        <img src="/img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
+                </a>
+
+                <%--        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"--%>
+                <%--                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"--%>
+                <%--                aria-label="Toggle navigation">--%>
+                <%--            Menu--%>
+                <%--            <i class="fas fa-bars"></i>--%>
+                <%--        </button>--%>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav text-uppercase ml-auto">
+                                <li class="nav-item">
+                                        <a class="nav-link js-scroll-trigger" href="/">Main page</a>
+
+                        </ul>
+                </div>
+        </div>
+</nav>
+
+<!-- Header -->
+
+
+<!-- About us -->
+<section id="about">
+        <div class="container">
+                <div class="list">
+
+                        <c:if test="${empty users}">
+                                <h3>Sorry, no records found... :(</h3>
+                        </c:if>
+
+                        <c:forEach items="${users}" var="user">
+                                First name: ${user.firstName} <br/>
+                                Last name: ${user.lastName} <br/>
+                                Email: ${user.email} <br/>
+                                Password: ${user.password} <br/>
+                                Address line 1: ${user.streetAddress1} <br/>
+                                Address line 2: ${user.streetAddress2} <br/>
+                                City: ${user.city} <br/>
+                                Postal Code: ${user.postalCode} <br/>
+                                State: ${user.state} <br/>
+                                Country: ${user.country} <br/>
+                                <a href="/user/edit/${user.id}">Edit</a>
+                                <a href="/user/delete/${user.id}">Delete</a>
+                                <br/><br/><br/>
+                        </c:forEach>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-6 text-justify">
+
+                </div>
+                <div class="side-img col-lg-6 d-lg-block ">
+                        <picture>
+                                <source srcset="/img/about.jpg" type="image/webp">
+                                <source srcset="/img/about.jpg" type="image/jpeg">
+                                <img src="/img/about.jpg">
+                        </picture>
+                </div>
         </div>
         </div>
-        </nav>
-
-        </head>
-        <body>
-        <h2>User</h2>
+</section>
 
 
-<%--        <c:if test="${empty users}">--%>
-<%--            <h3>Sorry, no records found... :(</h3>--%>
-<%--        </c:if>--%>
+<!-- Footer -->
+<footer>
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-4">
+                                <span class="copyright">Copyright &copy; Beauty Cosmetics 2019</span>
+                        </div>
+                        <div class="col-md-4">
+                                <ul class="list-inline social-buttons">
+                                        <!--<li class="list-inline-item">
+                                            <a href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </li>-->
+                                </ul>
+                        </div>
+                        <div class="col-md-4">
+                                <ul class="list-inline quicklinks">
+                                        <!--<li class="list-inline-item">
+                                            <a href="#">Privacy Policy</a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#">Terms of Use</a>
+                                        </li>-->
+                                </ul>
+                        </div>
+                </div>
+        </div>
+</footer>
 
-        <c:if test="${empty users}">
-            <h3>Sorry, no records found... :(</h3>
-        </c:if>
 
-        <c:forEach items="${users}" var="user">
-            First name: ${user.firstName} <br/>
-            Last name: ${user.lastName} <br/>
-            Email: ${user.email} <br/>
-            Password: ${user.password} <br/>
-            Address line 1: ${user.streetAddress1} <br/>
-            Address line 2: ${user.streetAddress2} <br/>
-            City: ${user.city} <br/>
-            Postal Code: ${user.postalCode} <br/>
-            State: ${user.state} <br/>
-            Country: ${user.country} <br/>
-            <a href="/user/edit/${user.id}">Edit</a>
-            <a href="/user/delete/${user.id}">Delete</a>
-            <br/><br/><br/>
-        </c:forEach>
-        </body>
-        </html>
+<!-- Bootstrap core JavaScript -->
+<script src="/bootstrap2/jquery.min.js"></script>
+<script src="/bootstrap2/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/bootstrap2/jquery.easing.min.js"></script>
+
+</body>
+
+</html>
