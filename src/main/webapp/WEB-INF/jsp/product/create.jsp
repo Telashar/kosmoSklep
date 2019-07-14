@@ -34,7 +34,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 <div class="container">
-                        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                        <a class="navbar-brand js-scroll-trigger" href="http://localhost:8080/#page-top">
                                 <img src="/img/logo_transparent.png" alt="Beauty Wholesale" height="28px">
                         </a>
 
@@ -48,10 +48,10 @@
                         <div class="collapse navbar-collapse" id="navbarResponsive">
                                 <ul class="navbar-nav text-uppercase ml-auto">
                                         <li class="nav-item">
-                                                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                                                <a class="nav-link js-scroll-trigger" href="http://localhost:8080/#about">About</a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link js-scroll-trigger" href="#brands">Our Brands</a>
+                                                <a class="nav-link js-scroll-trigger" href="http://localhost:8080/#brands">Our Brands</a>
                                         </li>
                                         <li class="nav-item">
                                                 <a class="nav-link js-scroll-trigger" href="/product/list">Products</a>
